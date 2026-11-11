@@ -1,13 +1,23 @@
 site_name: 量化交易社区经验录
 site_description: 基于英文量化社区（Elite Trader、Quant StackExchange、Wilmott、Reddit、Hacker News、QuantConnect、Numerai、X 等）343 篇精读讨论整理的中文专题书
 site_author: Peng
+site_url: https://qmwdy.github.io/quant-forum-book/
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
+copyright: 量化交易社区经验录 · 社区讨论的转述，不构成投资建议
+
+extra:
+  generator: false
+
+watch:
+  - includes
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
+  font: false
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -15,22 +25,28 @@ theme:
     - navigation.top
     - navigation.indexes
     - navigation.footer
+    - navigation.path
+    - navigation.tracking
+    - navigation.instant
+    - navigation.instant.prefetch
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tooltips
+    - content.footnote.tooltips
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: brown
+      accent: brown
       toggle:
         icon: material/weather-night
         name: 切换到深色模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: brown
+      accent: brown
       toggle:
         icon: material/weather-sunny
         name: 切换到浅色模式
@@ -56,6 +72,12 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.details
+  - pymdownx.snippets:
+      base_path:
+        - .
+      check_paths: true
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -68,6 +90,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/reading.js
 
 extra_css:
   - stylesheets/extra.css
