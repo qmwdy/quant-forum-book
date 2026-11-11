@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+  <link rel="stylesheet" href="https://fonts.loli.net/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap">
+  <meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141210" media="(prefers-color-scheme: dark)">
+{% endblock %}
+
+{% block header %}
+  <div class="book-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="阅读进度">
+    <span></span>
+  </div>
+  {{ super() }}
+{% endblock %}

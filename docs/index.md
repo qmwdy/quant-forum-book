@@ -1,8 +1,138 @@
+---
+title: 首页
+hide:
+  - navigation
+  - toc
+---
+
+<div class="book-landing" markdown="1">
+
+<div class="book-hero" markdown="1">
+
+<p class="book-kicker">英文量化社区经验汇编</p>
+
 # 量化交易社区经验录
 
-**一本写给 0DTE 期权与期货交易者的中文专题书**
+<p class="book-subtitle"><strong>一本写给 0DTE 期权与期货交易者的中文专题书</strong></p>
 
 本书把英文量化社区二十多年的讨论，整理成一部可检索、可核对、可反驳的中文读物。它基于 **343 篇精读的帖子**（Elite Trader、Wilmott、Quant StackExchange、Reddit、Hacker News、QuantConnect、Numerai、QuantNet、X 等，日期跨度 2002–2026），而不是基于某个人的观点或二手总结。
+
+<div class="book-cta" markdown="1">
+
+[开始阅读](preface.md){: .book-btn } [进入第 1 章](part1/ch01.md){: .book-btn .book-btn--ghost }
+
+</div>
+
+</div>
+
+<div class="book-stats">
+  <div class="book-stat"><strong>20</strong><span>章</span></div>
+  <div class="book-stat"><strong>6</strong><span>部分</span></div>
+  <div class="book-stat"><strong>343</strong><span>精读帖</span></div>
+  <div class="book-stat"><strong>2001–2026</strong><span>来源跨度</span></div>
+</div>
+
+<p class="book-sources">来源站点：Elite Trader · Wilmott · Quant StackExchange · Reddit · Hacker News · QuantConnect · Numerai · QuantNet · X。精读帖日期为 2002–2026，候选清单起于 2001。</p>
+
+<p class="book-section-label">六个部分</p>
+
+<div class="book-parts" markdown="1">
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">壹 · 第一部分</p>
+
+### [量化江湖与 Alpha](part1/ch01.md)
+
+从业者站在光谱的哪一段，edge 从哪里来，研究假设怎么立。
+
+- [第 1 章　量化江湖](part1/ch01.md)
+- [第 2 章　Alpha 从哪里来](part1/ch02.md)
+- [第 3 章　研究方法](part1/ch03.md)
+
+</article>
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">贰 · 第二部分</p>
+
+### [回测与实盘](part2/ch04.md)
+
+过拟合、数据里的隐形假设，以及回测走到成交时掉下去的那一截。
+
+- [第 4 章　回测与过拟合](part2/ch04.md)
+- [第 5 章　数据与回测工具](part2/ch05.md)
+- [第 6 章　实盘与回测的差距](part2/ch06.md)
+
+</article>
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">叁 · 第三部分</p>
+
+### [执行与风控](part3/ch07.md)
+
+成本、滑点、仓位，以及账户是怎么在某一天被打穿的。
+
+- [第 7 章　执行、成本与滑点](part3/ch07.md)
+- [第 8 章　风险管理与仓位](part3/ch08.md)
+- [第 9 章　爆仓与事故案例](part3/ch09.md)
+
+</article>
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">肆 · 第四部分</p>
+
+### [期权与波动率](part4/ch10.md)
+
+Greeks、卖权溢价、0DTE，以及别人贴出来的业绩该怎么读。
+
+- [第 10 章　波动率与期权基础](part4/ch10.md)
+- [第 11 章　卖权溢价](part4/ch11.md)
+- [第 12 章　0DTE](part4/ch12.md)
+- [第 13 章　业绩自述](part4/ch13.md)
+
+</article>
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">伍 · 第五部分</p>
+
+### [期货、日内与市场结构](part5/ch14.md)
+
+日内与期货、高频所在的市场结构，以及策略会怎样衰减。
+
+- [第 14 章　期货与日内](part5/ch14.md)
+- [第 15 章　高频与市场结构](part5/ch15.md)
+- [第 16 章　策略衰减](part5/ch16.md)
+
+</article>
+
+<article class="book-part" markdown="1">
+
+<p class="book-part__no">陆 · 第六部分</p>
+
+### [工程、AI 与人](part6/ch17.md)
+
+平台与券商、模型、纪律，以及理论派和实务派各说了什么。
+
+- [第 17 章　平台与基础设施](part6/ch17.md)
+- [第 18 章　机器学习与 AI](part6/ch18.md)
+- [第 19 章　心理与纪律](part6/ch19.md)
+- [第 20 章　行业观点](part6/ch20.md)
+
+</article>
+
+</div>
+
+<div class="book-quick" markdown="1">
+
+[术语表](appendix/glossary.md) [来源索引](appendix/index-by-chapter.md) [按站点索引](appendix/index-by-site.md) [方法与覆盖](appendix/method.md)
+
+</div>
+
+<div class="book-colophon" markdown="1">
 
 !!! abstract "这本书是什么"
     - 一部**“社区经验的转述与分歧地图”**：每章先讲概念（含公式），再摘述来源帖子里的观点，再列出阵营分歧，最后给出小结与自查清单。
@@ -35,3 +165,7 @@
 ## 一句话总结全书
 
 > 社区二十年的经验，几乎都落在同一个结论上：**把成本算够，把仓位压小，把最坏的一天想清楚，再谈 edge。**
+
+</div>
+
+</div>
