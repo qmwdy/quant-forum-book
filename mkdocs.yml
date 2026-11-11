@@ -1,0 +1,108 @@
+site_name: 量化交易社区经验录
+site_description: 基于英文量化社区（Elite Trader、Quant StackExchange、Wilmott、Reddit、Hacker News、QuantConnect、Numerai、X 等）343 篇精读讨论整理的中文专题书
+site_author: Peng
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+      separator: '[\s\u200b\-]'
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.caret
+  - pymdownx.mark
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 序言: preface.md
+  - 第一部分 量化江湖与 Alpha:
+    - 第 1 章 量化江湖：从业者光谱与散户的位置: part1/ch01.md
+    - 第 2 章 Alpha 从哪里来: part1/ch02.md
+    - 第 3 章 研究方法：假设、统计与样本量: part1/ch03.md
+  - 第二部分 回测与实盘:
+    - 第 4 章 回测与过拟合: part2/ch04.md
+    - 第 5 章 数据与回测工具: part2/ch05.md
+    - 第 6 章 实盘与回测的差距: part2/ch06.md
+  - 第三部分 执行与风控:
+    - 第 7 章 执行、成本与滑点: part3/ch07.md
+    - 第 8 章 风险管理与仓位: part3/ch08.md
+    - 第 9 章 爆仓与事故案例: part3/ch09.md
+  - 第四部分 期权与波动率:
+    - 第 10 章 波动率与期权基础: part4/ch10.md
+    - 第 11 章 卖权溢价的收益与代价: part4/ch11.md
+    - 第 12 章 0DTE 与极短期限期权: part4/ch12.md
+    - 第 13 章 散户期权战绩自述：怎么读别人的业绩: part4/ch13.md
+  - 第五部分 期货、日内与市场结构:
+    - 第 14 章 期货与日内交易: part5/ch14.md
+    - 第 15 章 高频交易与市场结构: part5/ch15.md
+    - 第 16 章 策略衰减与市场状态: part5/ch16.md
+  - 第六部分 工程、AI 与人:
+    - 第 17 章 平台、券商与基础设施: part6/ch17.md
+    - 第 18 章 机器学习与 AI: part6/ch18.md
+    - 第 19 章 心理、纪律与职业: part6/ch19.md
+    - 第 20 章 理论派与实务派：行业观点: part6/ch20.md
+  - 附录:
+    - 附录 A 术语表: appendix/glossary.md
+    - 附录 B 来源索引: appendix/index-by-chapter.md
+    - 附录 B2 按站点索引: appendix/index-by-site.md
+    - 附录 C 方法与覆盖说明: appendix/method.md
