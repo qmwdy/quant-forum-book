@@ -1032,3 +1032,60 @@ a.book-btn--ghost:hover {
     transition: none;
   }
 }
+
+/* ---- 深度解读（作者解读）块：折叠式 ??? interp ---- */
+:root {
+  --md-admonition-icon--interp: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1m3-19a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7Z"/></svg>');
+}
+
+.md-typeset details.interp,
+.md-typeset .admonition.interp {
+  margin: 1.1em 0 1.6em;
+  border: 1px solid color-mix(in srgb, var(--book-gold) 45%, var(--book-line));
+  border-left: 4px solid var(--book-gold);
+  border-radius: 4px 14px 14px 4px;
+  background:
+    linear-gradient(180deg, var(--book-gold-soft), transparent 3.4rem),
+    var(--book-card);
+}
+
+.md-typeset details.interp > summary,
+.md-typeset .admonition.interp > .admonition-title {
+  color: var(--book-gold);
+  font-size: 0.92em;
+  border-bottom: none;
+}
+
+.md-typeset details.interp[open] > summary {
+  border-bottom: 1px solid var(--book-line);
+}
+
+.md-typeset details.interp > summary::before,
+.md-typeset .admonition.interp > .admonition-title::before {
+  background-color: var(--book-gold);
+  -webkit-mask-image: var(--md-admonition-icon--interp);
+  mask-image: var(--md-admonition-icon--interp);
+}
+
+.md-typeset details.interp > summary::after {
+  color: var(--book-gold);
+}
+
+.md-typeset details.interp > :not(summary) {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+
+.md-typeset details.interp strong:first-child {
+  font-family: var(--book-sans);
+  letter-spacing: 0.03em;
+}
+
+.md-typeset details.interp p > strong:only-child,
+.md-typeset details.interp p > strong:first-child {
+  color: var(--book-pine);
+}
+
+.md-typeset details.interp .arithmatex {
+  overflow-x: auto;
+}
