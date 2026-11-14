@@ -9,11 +9,13 @@
 | Alpha / edge | 超额收益 / 优势 | 扣除风险暴露后的收益来源；“edge”更口语 |
 | Alpha decay | Alpha 衰减 | 策略因拥挤、成本或制度变化而逐渐失效 |
 | Arbitrage | 套利 | 无风险（或近似无风险）的价差获利 |
+| Arcsine law | 反正弦定律 | 随机游走位于零线上方的时间比例集中在两端而非 50%（第 14 章） |
 | ATR (average true range) | 平均真实波幅 | 常用的波动率指标 |
 | Backtest | 回测 | 用历史数据检验策略 |
 | Beta | 贝塔 | 对基准的敏感度；也指“收益里有多少来自市场” |
 | Bid / Ask / Mid | 买价 / 卖价 / 中间价 | 回测里用 mid 成交是常见的乐观假设 |
 | Black–Scholes–Merton (BSM) | 布莱克–斯科尔斯–默顿模型 | 经典期权定价模型 |
+| Bonferroni correction | 邦弗朗尼校正 | 检验 $m$ 个假设时把显著性门槛降到 $\alpha/m$（第 18 章） |
 | Breakeven win rate | 盈亏平衡胜率 | 使期望为零所需的胜率 |
 | Butterfly / Iron butterfly | 蝶式 / 铁蝶 | 由多个期权腿组成的有限风险结构 |
 | Calendar spread | 日历价差 | 同一行权价、不同到期日的买卖组合 |
@@ -38,15 +40,20 @@
 | Frequent batch auction | 频繁批量拍卖 | 以离散时间的拍卖代替连续撮合 |
 | Gamma | 伽马 | 期权 delta 对标的价格的敏感度 |
 | Gamma squeeze | 伽马挤压 | 做市商为对冲 gamma 而被迫追涨/杀跌的循环 |
+| Goodhart's law | 古德哈特定律 | 指标一旦成为目标，就不再是好指标（第 16 章） |
 | Greeks | 希腊字母 | 期权价格的各种敏感度 |
+| Half-life | 半衰期 | 衰减到一半所需的时间；$\ln0.5/\ln\varphi$（第 16、20 章） |
 | HFT (high-frequency trading) | 高频交易 | 对延迟极端敏感的自动化交易 |
 | Hit the bid / Lift the offer | 打买价 / 吃卖价 | 以市价卖出（成交于买价）/ 买入（成交于卖价） |
+| Implementation shortfall | 实施缺口 | 决策时价格与实际成交价之差，加上费用（第 7、15 章） |
 | Implied volatility (IV) | 隐含波动率 | 由期权价格反推的波动率 |
 | Information coefficient (IC) | 信息系数 | 预测值与实现值的相关系数 |
 | Iron condor | 铁鹰 | 卖出一个宽跨并买入更远的保护腿 |
+| IV crush | 波动率塌缩 | 事件（如财报）之后隐含波动率快速回落 |
 | Kalman filter | 卡尔曼滤波 | 估计时变参数的递推算法 |
 | Kelly criterion | 凯利准则 | 使长期对数增长最大的下注比例 |
 | Latency | 延迟 | 信号到成交之间的时间 |
+| Latency arbitrage | 延迟套利 | 利用不同场所价格更新的时间差抢在对方撤单前成交（第 15 章） |
 | LEAPS | 长期期权 | 到期日在一年以上的期权 |
 | Leverage | 杠杆 |  |
 | Limit order / Market order | 限价单 / 市价单 |  |
@@ -60,6 +67,7 @@
 | MBO (market by order) | 逐笔委托数据 | 包含每个委托的订单簿数据 |
 | Mean reversion | 均值回归 | 价格偏离均值后回归 |
 | Meta-labeling | 元标签 | 在已有策略之上训练过滤器预测交易胜负 |
+| Multiple testing | 多重检验 | 检验很多假设时，纯运气也会产生“显著”结果（第 3、18 章） |
 | Naked option | 裸期权 | 没有保护腿或标的覆盖的卖出期权 |
 | NBBO | 全美最佳买卖报价 |  |
 | OMS (order management system) | 订单管理系统 |  |
@@ -69,7 +77,7 @@
 | Portfolio margin | 组合保证金 | 按组合整体风险计算的保证金 |
 | Profit factor (PF) | 盈亏因子 | 总盈利/总亏损 |
 | Put–call parity | 看跌–看涨平价 | $C-P=B(F-K)$ 的无套利关系 |
-| | Realized volatility (RV) | 已实现波动率 | 由历史价格计算的波动率 |
+| Realized volatility (RV) | 已实现波动率 | 由历史价格计算的波动率 |
 | Regime | 市场状态 / 制度 | 波动率、趋势等条件相近的市场阶段 |
 | Rolling | 滚仓 | 平掉旧合约、同时开新合约 |
 | RoMaD | 收益/最大回撤 |  |
@@ -87,8 +95,13 @@
 | Survivorship bias | 幸存者偏差 | 只看到存活者所造成的偏差 |
 | Tail risk | 尾部风险 | 极端事件带来的损失 |
 | Theta | 西塔 | 时间价值衰减速度 |
+| Tick size | 最小报价单位 | 价格变动的最小间隔；决定价差下限与队列竞争（第 14、15 章） |
 | Variance risk premium (VRP) | 方差风险溢价 | 隐含方差平均高于已实现方差的部分 |
 | Vega | 维加 | 期权价格对波动率的敏感度 |
 | Vol surface / Skew | 波动率曲面 / 偏度 | 不同行权价与到期日的 IV 结构 |
+| Volatility clustering | 波动率聚集 | 高波动后更可能继续高波动（第 16 章） |
+| Volatility drag | 波动率拖累 | 几何增长率约为 $\mu-\sigma^2/2$，波动本身吃掉收益（第 8 章） |
 | Walk-forward | 前向滚动测试 | 分段训练-测试的样本外检验 |
 | Wheel strategy | 轮子策略 | 卖 put → 被行权 → 卖 covered call 的循环 |
+| Wilson interval | 威尔逊区间 | 比例（如胜率）的置信区间，小样本下比正态近似更可靠（第 11、12、18 章） |
+| Winner's curse | 赢家的诅咒 | 报价最低者往往是最低估风险者（第 20 章） |
